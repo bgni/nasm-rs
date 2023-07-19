@@ -474,5 +474,10 @@ fn test_parse_triple() {
     
     let triple = "x86_64-unknown-linux";
     assert_eq!(parse_triple(&triple), ("-felf64", "-gdwarf"));
+
+    let triple = "none";
+    assert_eq!(parse_triple(&triple), ("", "-g"));
+
 }
+
 
